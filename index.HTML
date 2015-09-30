@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Calculator</title>
+        
+        <style>
+            
+        
+        body {
+            margin: 100px;
+            padding: 50px;
+        }
+        
+        #sum {
+            background-color: darkblue;
+            color: white;
+            
+        }
+        
+        #result {
+            color: darkblue;
+            }
+            
+        #subtract {
+            background-color: blueviolet;
+            color: white;
+            
+            }
+        #subtractresult {
+            color: blueviolet;
+        }
+            
+        #multiply {
+            background-color: green;
+            color: white;
+            
+        }
+        
+        #multiplyresult {
+            color: green;
+        }
+        </style>
+        
+    </head>
+    <body>
+    
+        <div id="add">
+        <input id="number-one" type="text">
+        <input id="number-two" type="text">
+        
+        <button id="sum">Add</button>
+        
+        <p id="result"></p>
+        </div>
+        
+        <div id="subtraction">
+        <input id="first-number" type="text">
+        <input id="second-number" type="text">
+            
+        <button id="subtract">Subtract</button>
+            
+        <p id="subtractresult"></p>
+        </div>
+        
+        <div id="multiplication">
+        <input id="first-one" type="text">
+        <input id="second-one" type="text">
+            
+        <button id="multiply">Multiply</button>
+            
+        <p id="multiplyresult"></p>
+        </div>
+        
+        
+        <script>
+            
+           document.getElementById('sum').addEventListener('click', function(){
+                var numberOne = document.getElementById('number-one').value
+                var numberTwo = document.getElementById('number-two').value
+                
+                var result = parseInt(numberOne) + parseInt(numberTwo);
+            
+                document.getElementById('result').innerHTML = result;
+               
+            });
+            
+            document.getElementById('subtract').addEventListener('click', function(){
+                var firstNumber = document.getElementById('first-number').value
+                var secondNumber = document.getElementById('second-number').value
+                
+                var subtractresult = parseInt(firstNumber) - parseInt(secondNumber);
+                
+                document.getElementById('subtractresult').innerHTML = subtractresult;
+                
+            });
+            
+             document.getElementById('multiply').addEventListener('click', function(){
+                var firstOne = document.getElementById('first-one').value
+                var secondOne = document.getElementById('second-one').value
+                
+                var multiplyresult = parseInt(firstOne) * parseInt(secondOne);
+                
+                document.getElementById('multiplyresult').innerHTML = multiplyresult;
+                
+            });
+            
+            
+        
+        </script>   
+    </body>
+</html>
